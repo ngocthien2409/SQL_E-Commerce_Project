@@ -67,6 +67,18 @@ order by year_month;
 |   2 | 201702        |     62192 |       233373 |             733 |
 |   3 | 201703        |     69931 |       259522 |             993 |
 
+The Ecommerce website's performance over the first few months of 2017 is shown in the table, which also includes metrics for visits, page views, transactions, and income. Using the monthly data presented, the author gains some insights:
+
+**Traffic and Engagement Patterns:** From January to March, there was a rise in visits and pageviews, indicating a gradual increase in website interest. The increase in page views is a positive sign, indicating that users explore multiple pages during their visits, potentially finding the content interesting.
+
+**Trends in Conversion and Revenue:** From January to March, there was a steady increase in both the quantity of transactions and total revenue. This shows that more people are interacting with the website and that an increasing percentage of them are also making purchases, which increases income. Furthermore, the significant increase in sales and transactions between January and March of 201703 indicates that the efforts performed during this time may have been very successful in promoting user conversions.
+
+**Influence of Seasons or Marketing:** The steady increase in income and transactions over the period may point to the impact of marketing initiatives, seasonality, or optimizations carried out during this time.
+
+**Opportunities for Improvement:** Although the data indicates positive progress, there may be room to improve user engagement and conversion rates even more. Finding areas for development might be aided by examining popular landing pages, exit points, and specific user journeys.
+
+**Future Strategy and Focus:** Contemplate delving deeper into the tactics, initiatives, or modifications executed from January to March that facilitated the noteworthy surge in both sales and transactions. These revelations can guide further marketing and optimization campaigns.
+
 ### 5.2 Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 
 ```sql
@@ -90,6 +102,9 @@ order by total_visit DESC;
 |   8 | dfa                  |           302 |                   124 | 41.059602649006621 |
 |   9 | sites.google.com     |           230 |                    97 | 42.173913043478265 |
 |  10 | facebook.com         |           191 |                   102 |     53.40314136125 |
+
+The table gives a summary of website traffic coming from different sources and includes important parameters (source, total visits, total bounce rate, and total number of bounces) to assess user behavior and engagement. With 38,400 visits in the first row, the Google website saw the greatest traffic. 19,798 of these were bounces, or visits that ended on the same page; this yielded a bounce rate of almost 51.56%. The Direct website came in second with 19,891 visits from direct traffic and 8,606 bounces, meaning that its bounce rate was approximately 43.27%. Then, after 6,351 visits and 4,238 bounces, the website Youtube.com had a bounce rate of almost 66.73%, which was higher than that of Google and Direct.
+On the other hand, the website search.mysearch.com had the highest bounce rate yet the fewest visits overall. It had a bounce rate of roughly 91.67% with 12 visits and 11 bounces. This suggests that the majority of people who came to the website via this source went away without checking out any other pages. When users arrive from a source such as search.mysearch.com, a high bounce rate indicates that they may not discover what they are looking for or that the landing page experience may not be compelling enough to entice them to explore further. The context of the source and user behavior should be carefully examined to identify the most effective ways for improvement, even though tackling high bounce rates is crucial. Since a lower bounce rate typically denotes a higher level of user engagement with the information on the website, a higher bounce rate can imply that users are abandoning the site after only seeing one page.
 
 ### 5.3 Revenue by traffic source by week, by month in June 2017
 
@@ -131,6 +146,8 @@ Order by Prd_Revenue DESC;
 |   8 | month       | 201706 | dfa      |   8862.229996 |
 |   9 | week        | 201722 | (direct) |   6888.899975 |
 |  10 | week        | 201726 | google   |   5330.569964 |
+
+A variety of parameters, such as period, source, and revenue amount, are represented in this table that illustrates the collection of revenue data. Every row represents a distinct period (week or month) and gives details on the revenue that was brought in from various sources during that period, including search engines like myway.com, Google, DFA, mail.google.com, and (direct). Revenue earned can be classified into 3 types as follows: referrals from other websites, organic search traffic, and direct website visits.
 
 ### 5.4 Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017
 
@@ -174,6 +191,17 @@ order by pd.month;
 |   1 | 201706 |        94.02050113895217 |           316.86558846341671 |
 |   2 | 201707 |       124.23755186721992 |             334.056559795680 |
 
+With two columns labeled "avg_pageviews_purchase" and "avg_pageviews_non_purchase," the table displays user behavior over two consecutive months, June 2017 and July 2017.
+
+**Pageviews for Users Who Are Buying Compared to Those Who Aren't:** The information shows that customers who completed a transaction had significantly different average pageviews than users who did not. Those who made a purchase often browsed through more pages on the website than those who did not. For example, in June 2017, buyers had significantly more average page views (25.74) than non-buyers (4.07).
+
+**Engagement Patterns:** Users who are more involved with the website's content are more likely to make a purchase, as seen by the higher average pageviews among buyers. This may suggest that engagement and conversion are positively correlated.
+
+**Behavioral insights:** Various user habits are reflected in the data. A higher number of pageviews could result from interested users spending more time reading reviews, comparing options, and studying product specifics.
+
+**Conversion Optimization:** By using this data, the company may improve the content and design of its website to entice more users who are likely to make a purchase. This could entail enhancing the navigation, highlighting pertinent products, and offering insightful material to encourage users to convert.
+
+
 ### 5.5 Average number of transactions per user that made a purchase in July 2017
 
 ```sql
@@ -189,6 +217,8 @@ Group by 1;
 | Row |  time  |  Avg_total_transactions_per_user  |
 |-----|--------|-----------------------------------|
 |   1 | 201707 |                  4.16390041493776 |
+
+The average total transactions per user for July are displayed in the table. Based on the data, it can be inferred that the average user completed 1.11 transactions in July 2017. This could help analyze user activity, monitor how users interact with your platform or assess how well marketing initiatives or promotions performed that particular month.
 
 ### 5.6 Average amount of money spent per session. Only include purchaser data in July 2017
 
@@ -206,6 +236,8 @@ Group by  1;
 | Row |  time   |  avg_revenue_by_user_per_visit  |
 |-----|---------|---------------------------------|
 |   1 | 201707  |                           43.86 |
+
+In July 2017, there were 43.86 total transactions per user on average. This implies that during that month, each user carried out about 44 transactions on average. Businesses could find this to be a useful metric in gauging consumer activity and engagement.
 
 ### 5.7 Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. Output should show product name and the quantity was ordered
 
@@ -242,6 +274,8 @@ Order by Quantity DESC;
 |   9 | Google Men's Short Sleeve Hero Tee Charcoal      |          2 |
 |  10 | YouTube Twill Cap                                |          2 |
 
+In general, the information offers insightful information on consumer preferences, product appeal, and prospective areas for merchandising and marketing campaigns. Additional examination of past data and incorporation with client profiles may yield a more thorough comprehension of these patterns.
+
 ### 5.8 Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase
 
 ```sql
@@ -271,3 +305,14 @@ from product_data;
 |   1 | 201701   |              25787 |             7342 |           2143 |              28.47 |            8.31 |
 |   2 | 201702   |              21489 |             7360 |           2060 |              34.25 |            9.59 |
 |   3 | 201703   |              23549 |             8782 |           2977 |              37.29 |           12.64 |
+
+The table displays five different user behavior indicators and rates for the period of January to March 2017. In general, there was a gradual increase in the number of product views between January and March of 2017. Throughout the same period, there was an increase in both the add-to-cart and purchase rates, which suggests higher user engagement and conversion. The add-to-cart and purchase rates, however, were noticeably higher in March 2017, indicating possible enhancements to the user experience or marketing initiatives of the website.
+
+## 6. Conclusion:
+* Through this e-commerce dataset, the author has the chance to learn more about the marketing sector and the customer journey.
+
+* Through BigQuery analysis of the e-commerce information, the author is able to gain insight into customer behavior by examining metrics such as visits, purchases, revenue, bounce rate, and transactions.
+
+* By looking at referral sources, the author was able to get information about which marketing channels result in traffic and sales. Enhancing marketing ROI can be achieved by allocating resources to productive channels and streamlining ineffective ones.
+
+* To sum up, analyzing the e-commerce dataset on BigQuery revealed a plethora of information that is essential for making strategic decisions that would help the company increase sales, improve customer satisfaction, and streamline operations.
