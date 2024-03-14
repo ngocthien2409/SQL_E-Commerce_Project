@@ -49,7 +49,7 @@ The Ecommerce dataset is stored in a public Google BigQuery dataset. To access t
 
 ## 5. Business questions and code to solve:
 
-### 5.1 Calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+### 5.1 Calculate total visits, pageview, transactions for Jan, Feb and March 2017 (order by month)
 
 ```sql
 SELECT format_date("%Y%m", parse_date("%Y%m%d", date)) as year_month 
